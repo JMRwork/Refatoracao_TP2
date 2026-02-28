@@ -1,4 +1,15 @@
+# TP2 - Refatoração
+
 BuildPipeline Refactoring Kata in Java
 ======================================
 
-For exercise instructions see [top level README](../README.md)
+O código original se trata de um analisador de estados de testes e deploy de um suposto projeto instanciado ao passar pelo método principal 'run' da classe Pipeline.
+- Inicialmente temos algumas interfaces e contratos que formam o esqueleto do processo, no caso as interfaces Config, Emailer e Logger.
+- Temos também a classe Project, que é basicamente a classe do objeto a ser processado, o domínio.
+- E enums para facilitar a baixa acoplação e padronização de algumas condições do domínio. Sendo eles DeploymentEnvironment e TestStatus.
+- Na parte de Testes temos a implementação da inteface Logger na classe CapturingLogger. Dando uma idéia de possibilidade de como realizar os testes, mas sem nenhum teste implementado na classe PipelineTestes.
+
+Antes de começar a refatoração do código, foram implementados testes para validar a estrutura inicial do código. 
+Estes testes cobrem o método 'run' da classe Pipeline no qual ocorre o processo principal da aplicação.
+
+
