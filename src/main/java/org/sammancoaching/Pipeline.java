@@ -4,6 +4,7 @@ import org.sammancoaching.dependencies.Config;
 import org.sammancoaching.dependencies.Emailer;
 import org.sammancoaching.dependencies.Logger;
 import org.sammancoaching.dependencies.Project;
+import org.sammancoaching.dependencies.Status;
 
 public class Pipeline {
     private final Config config;
@@ -30,7 +31,7 @@ public class Pipeline {
             return true;
         }
 		
-		 if ("success".equals(project.runTests())) {
+		 if (Status.SUCCESS.equals(project.runTests())) {
              log.info("Tests passed");
              return true;
          } else {
@@ -40,7 +41,7 @@ public class Pipeline {
 	}
     
     private boolean deploy(Project project) {
-		if ("success".equals(project.deploy())) {
+		if (Status.SUCCESS.equals(project.deploy())) {
 		    log.info("Deployment successful");
 		    return true;
 		} else {
