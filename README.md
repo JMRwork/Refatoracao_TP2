@@ -12,6 +12,10 @@ O código original se trata de um analisador de estados de testes e deploy de um
 Antes de começar a refatoração do código, foram implementados testes para validar a estrutura inicial do código. 
 Estes testes cobrem o método 'run' da classe Pipeline no qual ocorre o processo principal da aplicação.
 
+### Refatoração 1
+
 A primeira refatoração foi feita na classe principal Pipeline, mais especificamente no método 'run'. E foi realizada por causa da dificuldade de apreender o sentido da cadeia de condicionais formada pelos if elses contidos na função.
 
+### Refatoração 2
 
+A segunda refatoração se deu na classe ‘Project’ onde foi separada em arquivos diferentes o builder e o domínio, além de ter sido feitas algumas simplificações como a classe projeto ter os atributos que originalmente ficavam contidos no builder, que causava uma certa confusão entre o domínio e seu builder, e a utilização de um switch expressivo, além de acrescentar a palavra chave final nos atributos já que não há alteração de estado após o builder.  
