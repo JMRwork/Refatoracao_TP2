@@ -19,3 +19,7 @@ A primeira refatoração foi feita na classe principal Pipeline, mais especifica
 ### Refatoração 2
 
 A segunda refatoração se deu na classe ‘Project’ onde foi separada em arquivos diferentes o builder e o domínio, além de ter sido feitas algumas simplificações como a classe projeto ter os atributos que originalmente ficavam contidos no builder, que causava uma certa confusão entre o domínio e seu builder, e a utilização de um switch expressivo, além de acrescentar a palavra chave final nos atributos já que não há alteração de estado após o builder.  
+
+### Refatoração 3
+
+A terceira refatoração foi apenas para estabelecer as strings “success” e “failure” como enums, evitando um problema de referênciamento no código, além de explicitar do que se trata o resultado.
